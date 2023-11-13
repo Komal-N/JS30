@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Book List</title>
+    <link rel="icon" href="../icon.png" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="books-search">
+            <div class="input-container" style="padding-top: 27.5px;">
+                <input type="text" placeholder="Search for a Book" id="search-input">
+                <button id="search-btn">Search</button>
+            </div>
+            <div class="results"></div>
+        </div>
+        <div class="books-list">
+            <h2>My List</h2>
+            <div class="input-container">
+                <input type="text" placeholder="Search in your list" onkeyup="filterList(this)">
+            </div>
+            <div class="list" id="book-list"></div>
+        </div>
+    </div>
+
+</body>
+<script src="script.js"></script>
+
+</html>
