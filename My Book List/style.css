@@ -78,3 +78,37 @@ h2 {
     font-size: 16px;
     color: goldenrod;
 }
+
+@media only screen and (max-width: 800px) {
+    .books-list {
+        display: none;
+    }
+
+    .books-search {
+        width: 100%;
+    }
+
+    .star {
+        display: none;
+    }
+
+    .result {
+        width: 90%;
+    }
+
+    .result-img {
+        width: 50%;
+    }
+
+    .result-info {
+        width: 50%;
+    }
+
+    .result-info>p:nth-child(4) {
+        display: none;
+    }
+
+    input {
+        width: 80%;
+    }
+}
