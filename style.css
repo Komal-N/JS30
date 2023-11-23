@@ -1,8 +1,7 @@
 .projects {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 4% 12%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 2% 8%;
 }
 
 .project {
