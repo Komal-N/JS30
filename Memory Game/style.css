@@ -40,3 +40,11 @@
     align-items: center;
     height: 100vh;
 }
+
+@media only screen and (max-width: 600px) {
+    .box {
+        height: 16vw;
+        width: 16vw;
+        font-size: 12vw;
+    }
+}
