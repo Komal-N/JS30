@@ -1,0 +1,42 @@
+.box {
+    height: 10vw;
+    width: 10vw;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6vw;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    cursor: pointer;
+    background: cornflowerblue;
+}
+
+.box span {
+    display: none;
+}
+
+.box.open {
+    background-color: white;
+}
+
+.box.matched {
+    background-color: white;
+}
+
+.box.open span,
+.box.matched span {
+    display: inline-block;
+}
+
+.row {
+    display: flex;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
