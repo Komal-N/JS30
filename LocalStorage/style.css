@@ -1,6 +1,6 @@
 html {
     box-sizing: border-box;
-    background: url("oh-la-la.jpeg") center no-repeat;
+    background: url("https://parade.com/.image/c_limit%2Ccs_srgb%2Cq_auto:good%2Cw_1257/MTkwNTgwOTE1MDc1MzYwNjM2/cheap-grocery-list-jpg.webp") center no-repeat;
     background-size: cover;
     min-height: 100vh;
     display: flex;
@@ -16,20 +16,11 @@ html {
     box-sizing: inherit;
 }
 
-svg {
-    fill: white;
-    background: rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    border-radius: 50%;
-    width: 200px;
-    margin-bottom: 50px;
-}
-
 .wrapper {
+    margin-top: 102px;
     padding: 20px;
     max-width: 350px;
     background: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
@@ -67,7 +58,7 @@ h2 {
 }
 
 .plates input:checked+label:before {
-    content: "🌮";
+    content: "✅";
 }
 
 .add-items {
