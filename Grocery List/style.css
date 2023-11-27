@@ -19,8 +19,7 @@ html {
 .wrapper {
     margin-top: 102px;
     padding: 20px;
-    max-width: 350px;
-    background: rgba(255, 255, 255, 0.95);
+    max-width: 32vw;
 }
 
 h2 {
