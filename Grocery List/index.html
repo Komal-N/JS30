@@ -18,6 +18,7 @@
         <form class="add-items">
             <input type="text" name="item" placeholder="Item Name" required autocomplete="off">
             <input type="submit" value="+ Add Item">
+            <p class="link-item" onclick="clearItems()">Clear All Items</p>
         </form>
     </div>
 
@@ -60,6 +61,11 @@
             items[index].done = !items[index].done;
             localStorage.setItem('items', JSON.stringify(items));
             populateList(items, itemsList);
+        }
+
+        function clearItems() {
+            localStorage.removeItem('items');
+            window.location.reload();
         }
 
         addItems.addEventListener('submit', addItem);
