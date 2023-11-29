@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Googly Mr. Bean</title>
+    <link rel="stylesheet" href="../icon.png">
+</head>
+
+<body>
+
+    <main>
+        <img id="anchor"
+            src="https://shop.mrbean.com/cdn/shop/t/13/assets/bean--choose-bean-left.jpg?v=108049564517621660831649345669"
+            width="60%">
+        <div id="eyes">
+            <img class="eye" id="eye-1" src="./eye.png">
+            <img class="eye" id="eye-2" src="./eye.png">
+        </div>
+
+    </main>
+
+    <style>
+        body {
+            background-color: white;
+            padding: 0;
+            margin: 0;
+        }
+
+        main {
+            display: grid;
+            place-items: center;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        .eye {
+            width: 50px;
+        }
+
+        #eyes img {
+            position: absolute;
+        }
+
+        #eye-1 {
+            top: 330px;
+            left: 784px;
+            border-radius: 50%;
+        }
+
+        #eye-2 {
+            top: 330px;
+            left: 670px;
+            border-radius: 50%;
+        }
+    </style>
+
+    <script>
+        const eyes = document.querySelector('.eyes');
+        const leftEye = document.querySelector('#left-eye');
+        const rightEye = document.querySelector('#right-eye');
+
+        function moving(e) {
+            const mouseX = e.clientX;
+            const mouseY = e.clientY;
+
+            const anchor = document.getElementById('anchor');
+            const rekt = anchor.getBoundingClientRect();
+            const anchorX = rekt.left + rekt.width / 2;
+            const anchorY = rekt.top + rekt.height / 2;
+
+            const angleDeg = angle(mouseX, mouseY, anchorX, anchorY);
+
+            const eyes = document.querySelectorAll('.eye');
+            eyes.forEach(eye => {
+                eye.style.transform = `rotate(${angleDeg - 90}deg)`;
+            })
+        };
+
+        function angle(cx, cy, ex, ey) {
+            const dx = ex - cx;
+            const dy = ey - cy;
+            const rad = Math.atan2(dy, dx);
+            const deg = rad * 180 / Math.PI; //converting radians to degrees
+            return deg;
+        }
+
+
+        document.addEventListener('mousemove', moving);
+
+    </script>
+
+</body>
+
+</html>
