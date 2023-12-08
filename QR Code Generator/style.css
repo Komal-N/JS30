@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(42, 42, 42);
+}
+
+.container {
+    width: 400px;
+    padding: 24px 36px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 8px;
+}
+
+.container p {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.container input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid black;
+    outline: 0;
+    padding: 8px;
+    margin: 8px 0 16px;
+    border-radius: 4px;
+}
+
+.container button {
+    width: 100%;
+    height: 36px;
+    background: rgb(42, 42, 42);
+    color: rgb(242, 240, 240);
+    border: 0;
+    outline: 0;
+    border-radius: 8px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    margin: 8px 0;
+    font-weight: 500;
+}
+
+#imgBox {
+    width: 200px;
+    border-radius: 4px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s;
+}
+
+#imgBox img {
+    width: 100%;
+    padding: 8px;
+}
+
+#imgBox.show-img {
+    max-height: 300px;
+    margin: 8px auto;
+    border: 1px solid gray;
+}
+
+.error {
+    animation: shake 0.1s linear 10;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(0);
+    }
+
+    25% {
+        transform: translate(-2px);
+    }
+
+    50% {
+        transform: translate(0);
+    }
+
+    75% {
+        transform: translate(2px);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
