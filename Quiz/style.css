@@ -60,6 +60,50 @@ body {
     padding: 16px;
     border-radius: 8px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 16px;
+}
+
+button {
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+}
+
+@media only screen and (max-width: 600px) {
+    .quiz-card {
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .quiz-card #question {
+        text-align: center;
+    }
+
+    .result {
+        border: none;
+    }
+
+    .options {
+        width: 100%;
+        padding: 16px;
+        margin: 0;
+        border: 1px solid black;
+        margin-bottom: 16px;
+        border-radius: 8px;
+    }
+
+    input {
+        display: none;
+    }
+
+    .selected {
+        background-color: black;
+        color: white;
+    }
 }
