@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <link rel="icon" href="../icon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="main p-2">
+        <div class="options col-3">
+            <button id="new" class="btn btn-dark" onclick="newNoteFn()">+ New Note</button>
+            <ul class="note-list list-group mt-4"></ul>
+        </div>
+        <div class="note col-8">
+            <div class="note-template">
+                <input type="text" placeholder="Enter Title" class="input-group p-2 mb-4" id="title">
+                <textarea id="note" placeholder="Start writing here..." class="input-group p-2 mb-4"></textarea>
+            </div>
+            <div class="buttons">
+                <button id="save" class="btn btn-success" onclick="saveNote()">Save</button>
+                <button id="delete" class="btn btn-danger" onclick="deleteNote()">Delete</button>
+            </div>
+        </div>
+    </div>
+
+
+    <style>
+        .main {
+            font-size: large;
+            display: flex;
+            gap: 12px;
+        }
+
+        textarea {
+            height: 75vh;
+            resize: none;
+        }
+
+        input[type='text'] {
+            height: 48px;
+        }
+
+        button {
+            height: 48px;
+        }
+
+        #new {
+            width: 100%;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #save {
+            width: 10%;
+        }
+
+        #delete {
+            width: 10%;
+        }
+
+        .input-group {
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        li {
+            cursor: pointer;
+        }
+    </style>
+
+</body>
+
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+</html>
