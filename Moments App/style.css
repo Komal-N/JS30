@@ -1,0 +1,82 @@
+body {
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    background: rgb(213, 186, 243);
+    font-family: 'Dancing Script', cursive;
+    color: white;
+}
+
+.photos {
+    display: flex;
+    gap: 16px;
+    padding: 16px;
+    font-family: 'Dancing Script', cursive;
+}
+
+.photo {
+    border: 1px solid black;
+    width: 300px;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.photo img {
+    width: calc(100% - 36px);
+    height: 320px;
+    object-fit: contain;
+}
+
+.photo.flip {
+    transform: rotateY(180deg);
+}
+
+.photo.flip img,
+.photo.flip p {
+    display: none;
+}
+
+.photo.flip .m-notes {
+    display: flex;
+    justify-content: center;
+    transform: rotateY(180deg);
+    align-items: center;
+    font-size: 30px;
+    text-align: center;
+}
+
+.photo .location {
+    font-size: 30px;
+    margin-bottom: 0;
+    padding: 2px 8px;
+}
+
+.photo .date {
+    margin-bottom: 0;
+}
+
+.photo textarea {
+    display: none;
+}
+
+.m-notes {
+    display: none;
+}
+
+.upload {
+    font-size: 24px !important;
+}
+
+input {
+    margin-bottom: 16px !important;
+}
